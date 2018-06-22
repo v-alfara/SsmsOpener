@@ -24,7 +24,7 @@ function OpenSsmsForKPIIncident {
     $typeName = $incidentString.Substring($splitPosition + 1);
 
     CreateSqlAndOpenSsms  `
-		-connectionString $connectionString `
+        -connectionString $connectionString `
         -sqlTemplateName 'kpi_incident' `
         -templateVariables @{'tenantId' = $tenantId; 'typeName' = $typeName}
 }
